@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "box1 box2 box3"
+        "box4 box4 box4"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: yellow;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 5px solid cyan;
+}
+
+.box1, .box2, .box3, .box4 {
+    background-color: lightyellow;
+    border: 5px solid maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subbox {
+    width: 80%; 
+    height: 100px;
+    background-color: lightblue;
+    border: 3px solid purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.box4 {
+    grid-area: box4;
+}
+
+footer {
+    grid-area: footer;
+    background-color: brown;
+    color: orange;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    border: 5px solid purple;
+}
